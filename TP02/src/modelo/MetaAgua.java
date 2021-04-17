@@ -1,4 +1,4 @@
-package trabalho.OO;
+package modelo;
 
 public class MetaAgua extends Metas {
 

@@ -5,7 +5,7 @@
  * 
  */
 
-package trabalho.OO;
+package modelo;
 
 public class Main {
 

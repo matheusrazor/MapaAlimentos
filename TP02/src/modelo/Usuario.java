@@ -2,16 +2,16 @@ package modelo;
 
 public class Usuario implements Calculadora {
 	
-	private String nomeUsuario; // Nome do usuario, usado para que + de 1 usuario possa manter registro de sua alimentacao
-	private double pesoUsuario; // Peso do usuario em kg, usado pela interface calculadoras
-	private double alturaUsuario; // Altura do usuario em cm
-	private int praticaExercicios; // Pratica de exercicio, de 0 - 4. Sendo 0 = sedentario e 4 = muito ativo
+	public static String nomeUsuario; // Nome do usuario, usado para que + de 1 usuario possa manter registro de sua alimentacao
+	public static double pesoUsuario; // Peso do usuario em kg, usado pela interface calculadoras
+	public static double alturaUsuario; // Altura do usuario em cm
+	public static int praticaExercicios; // Pratica de exercicio, de 0 - 4. Sendo 0 = sedentario e 4 = muito ativo
 	
 	Usuario(String nomeUsuario, double pesoUsuario, double alturaUsuario, int praticaExercicios) {
-		this.nomeUsuario = nomeUsuario;
-		this.pesoUsuario = pesoUsuario;
-		this.alturaUsuario = alturaUsuario;
-		this.praticaExercicios = praticaExercicios;
+		Usuario.nomeUsuario = nomeUsuario;
+		Usuario.pesoUsuario = pesoUsuario;
+		Usuario.alturaUsuario = alturaUsuario;
+		Usuario.praticaExercicios = praticaExercicios;
 	}
 	
 	public void indiceMC() {
@@ -39,36 +39,36 @@ public class Usuario implements Calculadora {
 		System.out.println("Suas calorias de manutenção, aproximadas: " + (ans + 5) + " para homens e " + (ans - 161) + " para mulheres.");
 	}
 	
-	public String getNomeUsuario() {
+	public static String getNomeUsuario() {
 		return nomeUsuario;
 	}
 
 	public void setNomeUsuario(String nomeUsuario) {
-		this.nomeUsuario = nomeUsuario;
+		Usuario.nomeUsuario = nomeUsuario;
 	}
 
-	public double getPesoUsuario() {
+	public static double getPesoUsuario() {
 		return pesoUsuario;
 	}
 
 	public void setPesoUsuario(double pesoUsuario) {
-		this.pesoUsuario = pesoUsuario;
+		Usuario.pesoUsuario = pesoUsuario;
 	}
 
-	public double getAlturaUsuario() {
+	public static double getAlturaUsuario() {
 		return alturaUsuario;
 	}
 
 	public void setAlturaUsuario(double alturaUsuario) {
-		this.alturaUsuario = alturaUsuario;
+		Usuario.alturaUsuario = alturaUsuario;
 	}
 
-	public int getPraticaExercicios() {
+	public static int getPraticaExercicios() {
 		return praticaExercicios;
 	}
 
 	public void setPraticaExercicios(int praticaExercicios) {
-		this.praticaExercicios = praticaExercicios;
+		Usuario.praticaExercicios = praticaExercicios;
 	}
 
 }

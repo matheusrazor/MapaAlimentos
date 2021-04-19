@@ -7,7 +7,7 @@ public class Usuario implements Calculadora {
 	public static double alturaUsuario; // Altura do usuario em cm
 	public static int praticaExercicios; // Pratica de exercicio, de 0 - 4. Sendo 0 = sedentario e 4 = muito ativo
 	
-	Usuario(String nomeUsuario, double pesoUsuario, double alturaUsuario, int praticaExercicios) {
+	public Usuario(String nomeUsuario, double pesoUsuario, double alturaUsuario, int praticaExercicios) {
 		Usuario.nomeUsuario = nomeUsuario;
 		Usuario.pesoUsuario = pesoUsuario;
 		Usuario.alturaUsuario = alturaUsuario;

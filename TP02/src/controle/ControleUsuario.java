@@ -10,7 +10,6 @@ public class ControleUsuario {
 	public void getInfoUsuario() {
 		String s = new String();
 		s = Usuario.getNomeUsuario();
-		user[i].nomeUsuario = s;
 		
 		double dAlt;
 		dAlt = Usuario.getAlturaUsuario();
@@ -21,7 +20,7 @@ public class ControleUsuario {
 		int iPrat;
 		iPrat = Usuario.getPraticaExercicios();
 		
-		
+		user[i] = new Usuario(s, dPeso, dAlt, iPrat);
 	
 	}
 }

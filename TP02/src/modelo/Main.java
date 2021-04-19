@@ -14,6 +14,7 @@ public class Main {
 		Alimento pastel = new Alimento("Pastel", 100, 168, 4.67, 18.51, 8.21);
 		MetaCalorias meta = new MetaCalorias(2000);
 		MetaProteinas metaPro = new MetaProteinas(100);
+		
 	}
 
 }

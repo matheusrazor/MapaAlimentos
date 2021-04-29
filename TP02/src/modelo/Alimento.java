@@ -1,59 +1,65 @@
 package modelo;
 
+/**
+*
+* @author Matheus Raphael Soares de Oliveira
+* 
+*/
+
 public class Alimento {
 
-	private String nomeAlimento;
-	private int quantidade; // quantidade do alimento de que vc tem os dados nutricionais, nao o tanto que comeu
-	private double calorias;
-	private double proteinas;
-	private double carboidratos;
-	private double gorduras;
+	private static String nomeAlimento;
+	private static int quantidade; // quantidade do alimento de que vc tem os dados nutricionais, nao o tanto que comeu
+	private static double calorias;
+	private static double proteinas;
+	private static double carboidratos;
+	private static double gorduras;
 	
-	Alimento(String nomeAlimento, int quantidade, double calorias, double proteinas, double carboidratos, double gorduras){
-		this.nomeAlimento = nomeAlimento;
-		this.quantidade = quantidade;
-		this.calorias = calorias;
-		this.proteinas = proteinas;
-		this.carboidratos = carboidratos;
-		this.gorduras = gorduras;
+	public Alimento(String nomeAlimento, int quantidade, double calorias, double proteinas, double carboidratos, double gorduras){
+		Alimento.nomeAlimento = nomeAlimento;
+		Alimento.quantidade = quantidade;
+		Alimento.calorias = calorias;
+		Alimento.proteinas = proteinas;
+		Alimento.carboidratos = carboidratos;
+		Alimento.gorduras = gorduras;
 	}
 	
 	
-	public String getNomeAlimento() {
+	public static String getNomeAlimento() {
 		return nomeAlimento;
 	}
 	public void setNomeAlimento(String nomeAlimento) {
-		this.nomeAlimento = nomeAlimento;
+		Alimento.nomeAlimento = nomeAlimento;
 	}
-	public int getQuantidade() {
+	public static int getQuantidade() {
 		return quantidade;
 	}
 	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+		Alimento.quantidade = quantidade;
 	}
-	public double getCalorias() {
+	public static double getCalorias() {
 		return calorias;
 	}
 	public void setCalorias(double calorias) {
-		this.calorias = calorias;
+		Alimento.calorias = calorias;
 	}
-	public double getProteinas() {
+	public static double getProteinas() {
 		return proteinas;
 	}
 	public void setProteinas(double proteinas) {
-		this.proteinas = proteinas;
+		Alimento.proteinas = proteinas;
 	}
-	public double getCarboidratos() {
+	public static double getCarboidratos() {
 		return carboidratos;
 	}
 	public void setCarboidratos(double carboidratos) {
-		this.carboidratos = carboidratos;
+		Alimento.carboidratos = carboidratos;
 	}
-	public double getGorduras() {
+	public static double getGorduras() {
 		return gorduras;
 	}
 	public void setGorduras(double gorduras) {
-		this.gorduras = gorduras;
+		Alimento.gorduras = gorduras;
 	}
 	
 }

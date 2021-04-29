@@ -1,8 +1,14 @@
 package modelo;
 
+/**
+*
+* @author Matheus Raphael Soares de Oliveira
+* 
+*/
+
 public class Usuario implements Calculadora {
 	
-	public static String nomeUsuario; // Nome do usuario, usado para que + de 1 usuario possa manter registro de sua alimentacao
+	public static String nomeUsuario; // Nome do usuario, usado para que + de 1 usuario possa manter registro de sua alimentacao -- Nao implementado
 	public static double pesoUsuario; // Peso do usuario em kg, usado pela interface calculadoras
 	public static double alturaUsuario; // Altura do usuario em cm
 	public static int praticaExercicios; // Pratica de exercicio, de 0 - 4. Sendo 0 = sedentario e 4 = muito ativo

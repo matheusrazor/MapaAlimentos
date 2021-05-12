@@ -9,7 +9,18 @@ import java.awt.Color;
  */
 
 public class TelaAlimento extends javax.swing.JFrame {
-
+	
+	public static String tNomeAlimento;
+	public static int tQuant;
+	public static double tCalories;
+	public static double tProteins;
+	public static double tCarbs;
+	public static double tFats;
+	
+	public static double totalCal = 0;
+	public static double totalPro = 0;
+	public static double totalCarb = 0;
+	public static double totalFat = 0;
 
     public TelaAlimento() {
         initComponents();
@@ -72,7 +83,7 @@ public class TelaAlimento extends javax.swing.JFrame {
 
         caloriasLabel.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         caloriasLabel.setForeground(new java.awt.Color(250, 250, 250));
-        caloriasLabel.setText("Calorias (em g)");
+        caloriasLabel.setText("Calorias");
 
         protLabel.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
         protLabel.setForeground(new java.awt.Color(250, 250, 250));
@@ -222,7 +233,7 @@ public class TelaAlimento extends javax.swing.JFrame {
 
     private void quantTextFieldFocusGained(java.awt.event.FocusEvent evt) {                                           
         
-        if(quantTextField.getText().trim().toLowerCase().equals("Gramas da tabela nutricional")) {
+        if(quantTextField.getText().trim().toLowerCase().equals("gramas da tabela nutricional")) {
             quantTextField.setText("");
             quantTextField.setForeground(Color.black);
         }
@@ -231,21 +242,27 @@ public class TelaAlimento extends javax.swing.JFrame {
 
     private void quantTextFieldFocusLost(java.awt.event.FocusEvent evt) {                                         
         
-        if(quantTextField.getText().trim().equals("") || 
-        quantTextField.getText().trim().toLowerCase().equals("username")) {
-            quantTextField.setText("username");
+        if(quantTextField.getText().trim().equals("")) {
+            quantTextField.setText("Gramas da tabela nutricional");
             quantTextField.setForeground(new Color(100, 100, 100));
         }
         
     }
                                                 
 
-    private void confirmaButtonMouseClicked(java.awt.event.MouseEvent evt) {                                            
-        // TODO add your handling code here:
+    private void confirmaButtonMouseClicked(java.awt.event.MouseEvent evt) {
+    	tNomeAlimento = nomeTextField.getText();
+    	tQuant = Integer.parseInt(quantTextField.getText());
+    	tCalories = Double.parseDouble(caloriasTextField.getText());
+    	tProteins = Double.parseDouble(protTextField.getText());
+    	tCarbs = Double.parseDouble(carbTextField.getText());
+    	tFats = Double.parseDouble(gorduraTextField.getText());
+    	
+    	dispose();
     }                                           
 
     private void cancelaButtonMouseClicked(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+    	dispose();
     }                                          
 
     
@@ -279,6 +296,12 @@ public class TelaAlimento extends javax.swing.JFrame {
                 new TelaAlimento().setVisible(true);
             }
         });
+		
+		/** Dados para o historico */
+		totalCal += tCalories;
+		totalPro += tProteins;
+		totalCarb += tCarbs;
+		totalFat += tFats;
     }
 
     // Variables declaration - do not modify                     

@@ -22,15 +22,16 @@ public class ControleAlimento {
 	
 	public ControleAlimento() {
 		
-		foodName = Alimento.getNomeAlimento();
-		amount = Alimento.getQuantidade();
-		cal = Alimento.getCalorias();
-		pro = Alimento.getProteinas();
-		carb = Alimento.getCarboidratos();
-		fat = Alimento.getGorduras();
+		/** Pega os dados apresentados na Tela de Alimento */
+		foodName = TelaAlimento.tNomeAlimento;
+		amount = TelaAlimento.tQuant;
+		cal = TelaAlimento.tCalories;
+		pro = TelaAlimento.tProteins;
+		carb = TelaAlimento.tCarbs;
+		fat = TelaAlimento.tFats;
 		
-		food = new Alimento(foodName, amount, cal, pro, carb, fat); // Criando um novo objeto alimento
-		
+		food = new Alimento(foodName, amount, cal, pro, carb, fat); /** Criando um novo objeto alimento */
+
 	}
 	
 }

@@ -6,9 +6,9 @@ package view;
 
 public class TelaMenu extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaMenu
-     */
+	/**
+	 * Cria uma nova tela
+	 */
     public TelaMenu() {
         initComponents();
     }
@@ -45,13 +45,13 @@ public class TelaMenu extends javax.swing.JFrame {
         cabecalhoPanel.setBackground(new java.awt.Color(120, 180, 250));
         cabecalhoPanel.setPreferredSize(new java.awt.Dimension(146, 54));
 
-        olaLabel.setText("Olá,");
+        olaLabel.setText("Olá, ");
 
         menuLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         menuLabel.setForeground(new java.awt.Color(75, 119, 190));
         menuLabel.setText("Menu");
 
-        usuarioDisplayLabel.setText("@adicionarNome");
+        usuarioDisplayLabel.setText(TelaUsuario.tNome);
 
         javax.swing.GroupLayout cabecalhoPanelLayout = new javax.swing.GroupLayout(cabecalhoPanel);
         cabecalhoPanel.setLayout(cabecalhoPanelLayout);
@@ -286,15 +286,17 @@ public class TelaMenu extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void menuAlimentoButtonMouseClicked(java.awt.event.MouseEvent evt) {                                                
-        // TODO add your handling code here:
+        TelaAlimento.main(null);
     }                                               
 
     private void calculadoraButtonMouseClicked(java.awt.event.MouseEvent evt) {                                               
-        // TODO add your handling code here:
+        modelo.Usuario.indiceMC();
+        modelo.Usuario.caloriasDiarias();
+    	TelaCalculadora.main(null);
     }                                              
 
-    private void historicoButtonMouseClicked(java.awt.event.MouseEvent evt) {                                             
-        // TODO add your handling code here:
+    private void historicoButtonMouseClicked(java.awt.event.MouseEvent evt) {     
+        TelaHistorico.main(null);
     }                                            
 
     private void metasButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         

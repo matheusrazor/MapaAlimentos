@@ -20,12 +20,13 @@ public class ControleUsuario {
 	
 	public ControleUsuario() {
 		
-		name = Usuario.getNomeUsuario();
-		weight = Usuario.getPesoUsuario();
-		height = Usuario.getAlturaUsuario();
-		condition = Usuario.getPraticaExercicios();
+		/* Pego os valores digitados na Tela de Usuário */
+		name = TelaUsuario.tNome;
+		weight = TelaUsuario.tPeso;
+		height = TelaUsuario.tAltura;
+		condition = TelaUsuario.tExer;
 		
-		user = new Usuario(name, weight, height, condition); // Criando um novo objeto usuario
+		user = new Usuario(name, weight, height, condition); /* Criando um novo objeto usuario */
 		
 	}
 	

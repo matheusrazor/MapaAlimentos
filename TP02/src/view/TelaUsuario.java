@@ -8,7 +8,13 @@ package view;
 
 public class TelaUsuario extends javax.swing.JFrame {
 
+	public static String tNome;
+	public static double tAltura, tPeso;
+	public static int tExer;
     
+	/**
+	 * Cria uma nova tela
+	 */
     public TelaUsuario() {
         initComponents();
     }
@@ -176,18 +182,25 @@ public class TelaUsuario extends javax.swing.JFrame {
 
     private void nomeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+    	
     }                                             
 
     private void alturaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {                                                
         // TODO add your handling code here:
     }                                               
 
-    private void confirmaButtonMouseClicked(java.awt.event.MouseEvent evt) {                                            
-        // TODO add your handling code here:
+    private void confirmaButtonMouseClicked(java.awt.event.MouseEvent evt) {
+    	tNome = nomeTextField.getText();
+    	tAltura = Double.parseDouble(alturaTextField.getText());
+    	tPeso = Double.parseDouble(pesoTextField.getText());
+    	tExer = Integer.parseInt(exerciciosTextField.getText());
+    	
+    	dispose();
+    	view.TelaMenu.main(null);
     }                                           
 
-    private void cancelaButtonMouseClicked(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+    private void cancelaButtonMouseClicked(java.awt.event.MouseEvent evt) {   
+    	dispose();
     }                                          
 
     /**
